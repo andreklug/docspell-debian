@@ -22,7 +22,7 @@ apt install ghostscript tesseract-ocr tesseract-ocr-deu tesseract-ocr-eng unpape
 
 Docspell works fine without fulltext-search - however it's very helpful when your document storage grows.
 
-You might want to look for a newer version of Apache SOLR at https://downloads.apache.org/lucene/solr/ - however I found that the currently latest version 8.11.1 works very well.
+You might want to look for a newer version of Apache SOLR at https://downloads.apache.org/lucene/solr/ - the currently latest version 8.11.1 works very well.
 
 ```
 cd /root/
