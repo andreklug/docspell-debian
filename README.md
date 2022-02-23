@@ -1,5 +1,5 @@
 # docspell-debian
-How to install the [Personal Document Manager Docspell](https://github.com/eikek/docspell) on Debian without Docker. I decided to go this route because a docspell installation is potentially living for many yeards, so I would like to remove any additional layer of complexity.
+How to install the [Personal Document Manager Docspell](https://github.com/eikek/docspell) on Debian without Docker. I decided to go this route because a docspell installation is potentially living for many years, so I would like to remove any additional layer of complexity.
 
 # Prerequisites
 
