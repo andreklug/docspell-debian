@@ -84,6 +84,23 @@ Dont forget to logout from the postgres user ("exit") until you are back to the 
 ```
 systemctl enable postgresql
 ```
+### Set up a scheduled database setup
+
+Because the database also holds the PDFs, I strongly recommend to create an automated backup. Copy the file postgres-backup.sh to /opt and edit it to your needs. As this stores the backup in a local folder, make sure to have a way to automatically transfer them to your backup storage.
+
+Then create a cronjob. Mine for example runs every night at 1.11. 
+
+``` 
+crontab -u postgres -e
+```
+
+add the following line to the end:
+
+```
+11 1 * * * sh /opt/psqlbackup.sh
+```
+
+For the first time, i'd suggest to run the script manually to get an idea of the backup size (mine is several GB every night) so you can plan to avoid running out of disk space.
 
 ## Docspell installation
 
