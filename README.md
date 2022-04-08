@@ -97,7 +97,7 @@ crontab -u postgres -e
 add the following line to the end:
 
 ```
-11 1 * * * sh /opt/psqlbackup.sh
+11 1 * * * sh /opt/postgres-backup.sh
 ```
 
 For the first time, i'd suggest to run the script manually to get an idea of the backup size (mine is several GB every night) so you can plan to avoid running out of disk space.
