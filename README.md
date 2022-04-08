@@ -150,8 +150,11 @@ curl -XPOST -H "Docspell-Admin-Secret: my secret" http://localhost:7880/api/v1/a
 ```
 
 ## Nginx Reverse Proxy
-
+```
 apt install nginx
+openssl dhparam -out /etc/nginx/dhparam.pem 2048
+```
+The second command creates the dhparam.pem file which is referenced in the config. It will run for several minutes, be patient ;) 
 
-Link to nginx example config
+Replace the /etc/nginx/sites-available/default with the content of the attached nginx-default example file.  As I am using my own PKI infrastructure to create and manage certificates, you must edit lines 27 - 29 accoring to your setup.
 
