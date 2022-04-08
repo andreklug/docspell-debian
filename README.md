@@ -84,7 +84,7 @@ Dont forget to logout from the postgres user ("exit") until you are back to the 
 ```
 systemctl enable postgresql
 ```
-### Set up a scheduled database setup
+### Set up a scheduled database backup
 
 Because the database also holds the PDFs, I strongly recommend to create an automated backup. Copy the file postgres-backup.sh to /opt and edit it to your needs. As this stores the backup in a local folder, make sure to have a way to automatically transfer them to your backup storage.
 
