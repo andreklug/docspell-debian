@@ -3,7 +3,7 @@ How to install the [Personal Document Manager Docspell](https://github.com/eikek
 
 # Prerequisites
 
-For this howto, I assume you already have Debian 11 (Bullseye) installed either on Bare Metal or in a VM, for example in Proxmox. I didn't test the installation within a Linux Container, but I assume that should work as well. The installation was performed with [**Release 0.32**](https://github.com/eikek/docspell/releases/)
+For this howto, I assume you already have Debian 11 (Bullseye) installed either on Bare Metal or in a VM, for example in Proxmox. I didn't test the installation within a Linux Container, but I assume that should work as well. The installation was performed with [**Release 0.32**](https://github.com/eikek/docspell/releases/). If the instruction don't work with a newer realease anymore, please let me know in the issues section so I can update them.
 
 I have assigned 4 Cores and 6GB Ram to this VM which seems to be more than enough for a full-featured installation with a few thousand documents.
 
@@ -134,7 +134,7 @@ mv dsc_amd* dsc
 chmod +x dsc
 mv dsc /usr/bin
 ```
-The latest release of dsc can be found [here](https://github.com/docspell/dsc/releases/latest). Now dsc is available from the command line.
+The latest release of `dsc can be found [here](https://github.com/docspell/dsc/releases/latest). Now dsc is available from the command line.
 
 
 ## Docspell configuration
@@ -145,7 +145,16 @@ You can use the files linked here, but don't forget to update the passwords in t
 
 *Note: You need to enable full-text search in both config files, as it is disabled by default. Also the database connection should be configured. The default values can be seen [here](https://docspell.org/docs/configure/main/#default-config).*
 
+For PostgreSQL, update the `jdbc` section of both `/etc/docspell-joex/docspell-joex.conf` and `/etc/docspell-restserver/docspell-server.conf` as follows:
 
+```
+jdbc {
+   url = "jdbc:postgresql://localhost:5432/docspelldb"
+   user = "docspell"
+   password = "YOURPASSWORD"
+ }
+```
+ 
 After editing the configuration files to your needs, it's time to start the docspell services:
 
 ```
