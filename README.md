@@ -181,7 +181,7 @@ In some situations it can be necessary to re-create the fulltext index, for exam
 The following command is requesting docspell to re-index all data. The `dsc` tool that has been installed above is used for this:
 
 ```
-dsc -d http://localhost:7880 admin -a 'my admin secret' recreate-index
+dsc -d http://localhost:7880 admin -a "my admin secret" recreate-index
 ```
 
 The admin secret must be set in the [configuration file](https://docspell.org/docs/configure/admin-endpoint/) (which requires a restart). 
