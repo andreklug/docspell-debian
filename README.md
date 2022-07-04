@@ -1,6 +1,10 @@
 # docspell-debian
 How to install the [Personal Document Manager Docspell](https://github.com/eikek/docspell) on Debian without Docker. I decided to go this route because a docspell installation is potentially living for many years, so I would like to remove any additional layer of complexity.
 
+# !!!IMPORTANT!!! 
+
+The below content contains an error that woudl make the database disappear after a reboot. I do not have the time to fix and test the description, please see the issues for a solution. Thanks @cpzengel
+
 # Prerequisites
 
 For this howto, I assume you already have Debian 11 (Bullseye) installed either on Bare Metal or in a VM, for example in Proxmox. I didn't test the installation within a Linux Container, but I assume that should work as well. The installation was performed with [**Release 0.32**](https://github.com/eikek/docspell/releases/). If the instruction don't work with a newer realease anymore, please let me know in the issues section so I can update them.
