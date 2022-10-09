@@ -32,7 +32,7 @@ You might want to look for a newer version of Apache SOLR at https://downloads.a
 cd /root/
 wget https://downloads.apache.org/lucene/solr/8.11.2/solr-8.11.2.tgz
 tar xzf solr-8.11.2.tgz
-bash solr-8.11.1/bin/install_solr_service.sh solr-8.11.2.tgz
+bash solr-8.11.2/bin/install_solr_service.sh solr-8.11.2.tgz
 ```
 
 This will install SOLR. Please check the installation success by monitoring the output of 
@@ -50,7 +50,7 @@ We'll leave SOLR alone for now and will return later to create the docspell core
 We need to create a SOLR core and make it available in Docspell:
 
 ```
-su solr -c '/opt/solr-8.11.1/bin/solr create -c docspell'
+su solr -c '/opt/solr-8.11.2/bin/solr create -c docspell'
 ```
 
 
